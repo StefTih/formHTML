@@ -29,8 +29,7 @@ public class FormServlet extends HttpServlet {
         details = request.getParameterNames();
         inputValues = new ArrayList<>();
 
-        while (details.hasMoreElements())
-        {
+        while (details.hasMoreElements()){
             Object obj = details.nextElement();
             String parameter = (String) obj;
             String value = request.getParameter(parameter);
