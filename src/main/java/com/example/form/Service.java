@@ -5,10 +5,10 @@
 
 package com.example.form;
 
-import java.util.Enumeration;
 import java.util.Iterator;
 import java.util.List;
 
+import jakarta.servlet.http.HttpServletRequest;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
@@ -28,18 +28,18 @@ public class Service {
         sessionFactory = (new MetadataSources(registry)).buildMetadata().buildSessionFactory();
     }
 
-    public void saveValues(List<String> details) {
-        iterator = details.iterator();
+    public void saveValues(HttpServletRequest details) {
+//        iterator = details.iterator();
         session = sessionFactory.openSession();
         transaction = session.beginTransaction();
 
         Employee employee = new Employee();
-        employee.setFirstName(iterator.next());
-        employee.setLastName(iterator.next());
-        employee.setEmail(iterator.next());
-        employee.setGender(iterator.next());
-        employee.setJobDescription(iterator.next());
-        employee.setPassword(iterator.next());
+        employee.setFirstName(details.getParameter("firstName"));
+        employee.setLastName(details.getParameter("lastName"));
+        employee.setEmail(details.getParameter("email"));
+        employee.setGender(details.getParameter("gender"));
+        employee.setJobDescription(details.getParameter("jobDescription"));
+        employee.setPassword(details.getParameter("password"));
 
         session.save(employee);
         transaction.commit();

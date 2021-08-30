@@ -1,65 +1,39 @@
-//
-// Source code recreated from a .class file by IntelliJ IDEA
-// (powered by FernFlower decompiler)
-//
-
 package com.example.form;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
+import javax.print.attribute.standard.MediaSize;
 
 @Entity
-@Table(
-        name = "employee"
-)
+@Table(name = "employee")
 public class Employee {
+
     @Id
-    @GeneratedValue(
-            strategy = GenerationType.IDENTITY
-    )
-    @Column(
-            name = "employeeId"
-    )
-    private Long employeeId;
-    @Column(
-            name = "first_name"
-    )
+    @Column(name = "employeeId")
+    private int employeeId;
+
+    @Column(name = "first_name")
     private String firstName;
-    @Column(
-            name = "last_name"
-    )
+    @Column(name = "last_name")
     private String lastName;
-    @Column(
-            name = "email"
-    )
+    @Column(name = "email")
     private String email;
-    @Column(
-            name = "gender"
-    )
+    @Column(name = "gender")
     private String gender;
-    @Column(
-            name = "job_description"
-    )
+    @Column(name = "job_description")
     private String jobDescription;
-    @Column(
-            name = "password"
-    )
+    @Column(name = "password")
     private String password;
 
-    public Long getEmployeeId() {
-        return this.employeeId;
+    public int getEmployeeId() {
+        return employeeId;
     }
 
-    public void setEmployeeId(Long employeeId) {
+    public void setEmployeeId(int employeeId) {
         this.employeeId = employeeId;
     }
 
     public String getFirstName() {
-        return this.firstName;
+        return firstName;
     }
 
     public void setFirstName(String firstName) {
@@ -67,7 +41,7 @@ public class Employee {
     }
 
     public String getLastName() {
-        return this.lastName;
+        return lastName;
     }
 
     public void setLastName(String lastName) {
@@ -75,7 +49,7 @@ public class Employee {
     }
 
     public String getEmail() {
-        return this.email;
+        return email;
     }
 
     public void setEmail(String email) {
@@ -83,7 +57,7 @@ public class Employee {
     }
 
     public String getGender() {
-        return this.gender;
+        return gender;
     }
 
     public void setGender(String gender) {
@@ -91,7 +65,7 @@ public class Employee {
     }
 
     public String getJobDescription() {
-        return this.jobDescription;
+        return jobDescription;
     }
 
     public void setJobDescription(String jobDescription) {
@@ -99,7 +73,7 @@ public class Employee {
     }
 
     public String getPassword() {
-        return this.password;
+        return password;
     }
 
     public void setPassword(String password) {

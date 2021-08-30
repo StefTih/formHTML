@@ -1,6 +1,6 @@
 <component name="ArtifactManager">
   <artifact type="war" name="FormHTML:war">
-    <output-path>$USER_HOME$/Desktop/IntelijIDEA Projects/formHTML/demo/target</output-path>
+    <output-path>$PROJECT_DIR$/target</output-path>
     <properties id="maven-jee-properties">
       <options>
         <module>FormHTML</module>

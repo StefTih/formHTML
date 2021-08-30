@@ -10,7 +10,9 @@
 <body>
 <h1> Fill in the details</h1><br>
 
-<form action="formServlet" method="post" onsubmit="check()">
+
+
+<form action="formServlet" method="post"> <%--//onsubmit="check()">--%>
     Enter your first name: <input type="text" name="firstName" required><br><br>
     Enter your last name: <input type="text" name="lastName" required><br><br>
     Enter your email: <input type="text" name="email" required><br><br>
